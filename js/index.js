@@ -40,3 +40,62 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//--------------------------------------------------------------
+const header = document.querySelector('nav');
+const navBar = header.querySelectorAll('a');
+navBar[0].textContent = siteContent['nav']['nav-item-1']
+navBar[1].textContent = siteContent['nav']['nav-item-2']
+navBar[2].textContent = siteContent['nav']['nav-item-3']
+navBar[3].textContent = siteContent['nav']['nav-item-4']
+navBar[4].textContent = siteContent['nav']['nav-item-5']
+navBar[5].textContent = siteContent['nav']['nav-item-6'];
+
+const ctaImage = document.getElementById('cta-img');
+ctaImage.setAttribute('src',siteContent['cta']['img-src']);
+
+let cta = siteContent['cta']['h1'].split('');
+const title = document.getElementsByTagName('h1')[0];
+title.innerHTML = cta.join('<br>');
+
+const midImage = document.getElementById('middle-img');
+midImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const getStarted = document.getElementsByTagName('button')[0];
+getStarted.innerText = siteContent['cta']['button'];
+
+const mainContent = document.querySelector('.main-content');
+const mainSection = mainContent.querySelectorAll('h4');
+const mainText = mainContent.querySelectorAll('p');
+mainSection[0].textContent = siteContent['main-content']['features-h4'];
+mainText[0].textContent = siteContent['main-content']['features-content'];
+mainSection[1].textContent = siteContent['main-content']['about-h4'];
+mainText[1].textContent = siteContent['main-content']['about-content'];
+mainSection[2].textContent = siteContent['main-content']['services-h4'];
+mainText[2].textContent = siteContent['main-content']['services-content'];
+mainSection[3].textContent = siteContent['main-content']['product-h4'];
+mainText[3].textContent = siteContent['main-content']['product-content'];
+mainSection[4].textContent = siteContent['main-content']['vision-h4'];
+mainText[4].textContent = siteContent['main-content']['vision-content'];
+
+const contact = document.querySelector('.contact');
+const contactTitle = contact.querySelector('h4');
+let contactText = contact.querySelectorAll('p');
+contactTitle.textContent = siteContent['contact']['contact-h4'];
+contactText[0].textContent = siteContent['contact']['address'];
+contactText[1].textContent = siteContent ['contact']['phone'];
+contactText[2].textContent = siteContent ['contact']['email'];
+
+const footer = document.querySelector('footer');
+const year = footer.querySelector('p');
+year.textContent = siteContent['footer']['copyright'];
+
+navBar.forEach(item => {item.style.color = 'green'});
+
+const appendage = navBar[0].cloneNode(true);
+appendage.textContent = 'Careers';
+header.appendChild(appendage);
+
+const meetUs = navBar[0].cloneNode(true);
+meetUs.textContent = 'Meet The Team';
+header.prepend(meetUs);
