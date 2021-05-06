@@ -40,3 +40,45 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//--------------------------------------------------------------
+let headerNav = document.querySelectorAll ('nav a');
+headerNav[0].innertext = 'Services';
+headerNav[1].innertext = 'Product';
+headerNav[2].innertext = 'Vision';
+headerNav[3].innertext = 'Features';
+headerNav[4].innertext = 'About';
+headerNav[5].innertext = 'Contact';
+
+document.querySelector('#logo-img').src = 'img/logo.png';
+
+document.querySelector('cta-text h1').innerHTML = 'DOM<br> IS<br> AWESOME';
+document.querySelector('.cta-text button').innertext = 'Get Started';
+
+document.getElementById('cta-img').src = 'img/header-img.png';
+
+let topContent = document.querySelectorAll('.top-content .text-content');
+topContent[0].querySelector('h4').textContent = 'Features';
+topContent[0].querySelector('p').textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+topContent[1].querySelector('h4').textContent = 'About';
+topContent[1].querySelector('p').textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+document.getElementById('middle-img').src = 'img/mid-page-accent.jpg';
+
+let bottomContent = document.querySelectorAll('.bottom-content .text-content');
+bottomContent[0].querySelector('h4').textcontent = 'Services';
+bottomContent[0].querySelector('p').textContent = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+bottomContent[1].querySelector('h4').textContent = 'Product';
+bottomContent[1].querySelector('p').textContent = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+bottomContent[2].querySelector('h4').textContent = 'Vision';
+bottomContent[2].querySelector('p').textContent = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+let contact = document.querySelector('.contact');
+contact.querySelector('h4').innerText = 'Contact';
+contact.querySelector('p')[0].innerHTML = '123 Way 456 Street<br> Somewhere, USA';
+contact.querySelector('p')[1].innerText = '1 (888) 888-8888';
+contact.querySelector('p')[2].innerText = 'sales@greatidea.io';
+
+document.querySelector('footer p').innerText = 'Copyright Great Idea! 2018';
+
+headerNav.forEach(item => item.style.color = 'green');
